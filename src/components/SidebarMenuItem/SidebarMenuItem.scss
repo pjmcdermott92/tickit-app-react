@@ -1,0 +1,54 @@
+.sidebar-menu-item {
+	margin-bottom: 0.5rem;
+
+	button {
+		display: flex;
+		align-items: center;
+		gap: 0.15rem;
+		width: 100%;
+		padding: 0.25rem 0 0.25rem 1rem;
+		background: none;
+		border: none;
+		font: inherit;
+		cursor: pointer;
+
+		&:hover {
+			background-color: var(--color-light);
+		}
+
+		.icon {
+			padding-bottom: 3px;
+		}
+	}
+	.menu-item {
+		position: relative;
+		width: 100%;
+		padding: 0.5rem 0.25rem;
+		cursor: pointer;
+
+		&.submenu::after {
+			content: '\002B';
+			position: absolute;
+			right: 0.5rem;
+			font-size: 1.5rem;
+		}
+
+		&:hover,
+		&.active {
+			background-color: var(--color-light);
+		}
+
+        &.active.submenu::after {
+            content: '\002D';
+        }
+
+		.icon {
+			font-size: 1.25rem;
+			padding-bottom: 0.15rem;
+		}
+	}
+
+	.submenu {
+		list-style: none;
+	}
+}

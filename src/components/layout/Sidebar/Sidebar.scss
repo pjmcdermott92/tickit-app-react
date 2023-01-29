@@ -1,56 +1,89 @@
 .sidebar-container {
-    position: relative;
-    width: 220px;
-    padding-top: 2.5rem;
-    background-color: #FFF;
-    box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05);
-    line-break: none;
-    transition: 250ms ease-in-out;
+	position: relative;
+	width: 220px;
+	padding-top: 2.5rem;
+	background-color: #fff;
+	box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05);
+	line-break: none;
+	overflow: hidden;
+	transition: 250ms ease-in-out;
 
-    &.small {
-        width: 50px;
+	&.small {
+		width: 50px;
 
-        .sidebar-bottom-bg {
-            opacity: 0;
-        }
+		&:hover {
+			width: 220px;
 
-        .hide-nav-btn {
-            transform: rotate(180deg);
-        }
-    }
+			.label {
+				display: initial;
+			}
 
-    .hide-nav-btn {
-        position: absolute;
-        top: .15rem;
-        right: .15rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: 250ms ease-in-out;
-        border-radius: 100%;
+            .submenu li {
+                display: flex;
+            }
 
-        &:hover {
-            background-color: var(--color-bg);
-        }
-    }
+            .sidebar-bottom-bg {
+                opacity: initial;
+            }
+		}
 
-    .sidebar-bottom-bg {
-        position: absolute;
-        bottom: 0;
-        display: block;
-        width: 100%;
-        height: 250px;
-        opacity: 1;
-        background: {
-            image: url('../../../assets/images/decoration-blue-colors.png');
-            repeat: no-repeat;
-            size: contain;
-            position: bottom;
-        }
-        transition: 250ms ease-in-out;
-    }
+		.label {
+			display: none;
+		}
+
+		.sidebar-bottom-bg {
+			opacity: 0;
+		}
+
+		.hide-nav-btn {
+			transform: rotate(180deg);
+		}
+
+		.submenu li {
+			display: none;
+		}
+	}
+
+	.label {
+		white-space: nowrap;
+	}
+
+	.hide-nav-btn {
+		position: absolute;
+		top: 0.15rem;
+		right: 0.15rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		font-size: 1.5rem;
+		cursor: pointer;
+		transition: 250ms ease-in-out;
+		border-radius: 100%;
+
+		&:hover {
+			background-color: var(--color-bg);
+		}
+	}
+
+	.sidebar-bottom-bg {
+		position: absolute;
+		bottom: 0;
+		display: block;
+		width: 100%;
+		height: 250px;
+		opacity: 1;
+		background: {
+			image: url('../../../assets/images/decoration-blue-colors.png');
+			repeat: no-repeat;
+			size: contain;
+			position: bottom;
+		}
+		transition: 250ms ease-in-out;
+	}
+
+	.sidebar-menu {
+		list-style: none;
+	}
 }

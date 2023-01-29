@@ -1,4 +1,5 @@
 import {
+	IoHomeOutline,
 	IoPeopleCircleOutline,
 	IoPeopleOutline,
 	IoPersonAddOutline,
@@ -17,6 +18,11 @@ type SidebarMenuProps = {
 }
 
 const SIDEBAR_MENUS = [
+	{
+		label: 'Dashboard',
+		icon: IoHomeOutline,
+		href: '/'
+	},
 	{
 		label: 'Users',
 		icon: IoPeopleCircleOutline,

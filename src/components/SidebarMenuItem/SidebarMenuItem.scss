@@ -1,7 +1,7 @@
 .sidebar-menu-item {
 	margin-bottom: 0.5rem;
 
-	button {
+	a, button {
 		display: flex;
 		align-items: center;
 		gap: 0.15rem;
@@ -10,10 +10,13 @@
 		background: none;
 		border: none;
 		font: inherit;
+		color: inherit;
 		cursor: pointer;
+		text-decoration: none;
 
 		&:hover {
 			background-color: var(--color-light);
+			text-decoration: none;
 		}
 
 		.icon {

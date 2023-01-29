@@ -1,17 +1,14 @@
 import { Link } from 'react-router-dom';
+import { useLayout } from '../../../contexts/LayoutContext';
 import useToggle from '../../../hooks/useToggle';
 import { IoMenu, IoPersonOutline } from 'react-icons/io5';
 import Logo from '../../../assets/images/logo-semi-transparent.png';
 import UserMenu from '../UserMenu/UserMenu';
 import './TopBar.scss';
 
-type TopBarProps = {
-	showSidebar: boolean;
-	toggleShowSidebar: any;
-};
-
-const TopBar = ({ showSidebar, toggleShowSidebar }: TopBarProps) => {
+const TopBar = () => {
 	const [showUserMenu, toggleShowUserMenu] = useToggle(false);
+	const { showSidebar, toggleShowSidebar } = useLayout();
 
 	return (
 		<>

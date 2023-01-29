@@ -1,3 +1,4 @@
+import { useLayout } from '../../../contexts/LayoutContext';
 import {
 	IoHomeOutline,
 	IoPeopleCircleOutline,
@@ -11,11 +12,6 @@ import {
 } from 'react-icons/io5';
 import './Sidebar.scss';
 import SidebarMenuItem from '../SidebarMenuItem/SidebarMenuItem';
-
-type SidebarMenuProps = {
-	showSidebar: boolean
-	toggleShowSidebar: any
-}
 
 const SIDEBAR_MENUS = [
 	{
@@ -83,7 +79,9 @@ const SIDEBAR_MENUS = [
 	},
 ];
 
-const Sidebar = ({ showSidebar, toggleShowSidebar }: SidebarMenuProps) => {
+const Sidebar = () => {
+	const { showSidebar } = useLayout();
+
 	return (
 		<aside className={`sidebar-container ${!showSidebar ? 'hidden' : ''}`}>
 			<ul className='sidebar-menu'>

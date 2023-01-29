@@ -1,12 +1,14 @@
-.page-wrapper {
-    position: relative;
-    display: flex;
-    align-items: stretch;
-    gap: .5rem;
-    width: 100%;
-    height: calc(100vh - 3.25rem);
+.main-container {
+    margin-top: 3.25rem;
+    transition: 250ms ease-in-out;
+
+    &.fixed {
+        margin-left: 225px;
+    }
 }
 
-.main-container {
-    flex: 1;
+@media screen and (max-width: 999px) {
+    .main-container.fixed {
+        margin-left: 0;
+    }
 }

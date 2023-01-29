@@ -1,14 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
-import RootLayout from './pages/layouts/RootLayout/RootLayout';
+import LayoutProvider from './contexts/LayoutContext';
 
 const App = () => {
 	return (
-    <Routes>
-      <Route path='/' element={<RootLayout />}>
-        <Route index element={<p>Hi!</p>} />
-      </Route>
-    </Routes>
-  );
+		<Routes>
+			<Route path='/' element={<LayoutProvider />}>
+				<Route index element={<p>Hi!</p>} />
+			</Route>
+		</Routes>
+	);
 };
 
 export default App;

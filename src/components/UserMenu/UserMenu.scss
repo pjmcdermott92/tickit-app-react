@@ -1,0 +1,14 @@
+.user-context-menu {
+	top: 3.25rem;
+	right: 0.5rem;
+	width: 200px;
+
+	.context-menu-item a,
+	.context-menu-item button {
+		padding: 0.75rem 0.5rem;
+
+		&:hover {
+			border: 1px dashed var(--color-dark);
+		}
+	}
+}

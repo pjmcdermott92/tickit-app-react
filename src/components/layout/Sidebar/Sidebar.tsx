@@ -1,5 +1,4 @@
 import useToggle from '../../../hooks/useToggle';
-import * as Icons from 'react-icons/io5';
 import {
 	IoArrowBackCircleOutline,
 	IoPeopleCircleOutline,

@@ -1,7 +1,14 @@
+import { Routes, Route } from 'react-router-dom';
+import RootLayout from './pages/layouts/RootLayout/RootLayout';
+
 const App = () => {
-  return (
-    <h1>Hello, World!</h1>
-  )
-}
+	return (
+    <Routes>
+      <Route path='/' element={<RootLayout />}>
+        <Route index element={<p>Hi!</p>} />
+      </Route>
+    </Routes>
+  );
+};
 
 export default App;

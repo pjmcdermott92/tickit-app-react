@@ -3,18 +3,12 @@ import useToggle from '../../hooks/useToggle';
 import './SidebarMenuItem.scss';
 
 type SidebarMenuProps = {
-	isSmall: boolean;
 	label: string;
 	icon: React.Component | any;
 	items?: any[];
 };
 
-const SidebarMenuItem = ({
-	isSmall,
-	label,
-	icon: Icon,
-	items,
-}: SidebarMenuProps) => {
+const SidebarMenuItem = ({ label, icon: Icon, items }: SidebarMenuProps) => {
 	const [active, toggleActive] = useToggle(false);
 
 	return (

@@ -1,6 +1,4 @@
-import useToggle from '../../../hooks/useToggle';
 import {
-	IoArrowBackCircleOutline,
 	IoPeopleCircleOutline,
 	IoPeopleOutline,
 	IoPersonAddOutline,
@@ -12,6 +10,11 @@ import {
 } from 'react-icons/io5';
 import './Sidebar.scss';
 import SidebarMenuItem from '../../SidebarMenuItem/SidebarMenuItem';
+
+type SidebarMenuProps = {
+	showSidebar: boolean
+	toggleShowSidebar: any
+}
 
 const SIDEBAR_MENUS = [
 	{
@@ -74,23 +77,12 @@ const SIDEBAR_MENUS = [
 	},
 ];
 
-const Sidebar = () => {
-	const [smallSidebar, toggleSmallSidebar] = useToggle(false);
-
+const Sidebar = ({ showSidebar, toggleShowSidebar }: SidebarMenuProps) => {
 	return (
-		<aside className={`sidebar-container ${smallSidebar ? 'small' : ''}`}>
-			<div
-				role='button'
-				className='hide-nav-btn'
-				title='Hide Navbar'
-				tabIndex={0}
-				onClick={() => toggleSmallSidebar()}
-			>
-				<IoArrowBackCircleOutline />
-			</div>
+		<aside className={`sidebar-container ${!showSidebar ? 'hidden' : ''}`}>
 			<ul className='sidebar-menu'>
 				{SIDEBAR_MENUS.map((item) => (
-					<SidebarMenuItem key={item.label} isSmall={smallSidebar} {...item} />
+					<SidebarMenuItem key={item.label} {...item} />
 				))}
 			</ul>
 			<span className='sidebar-bottom-bg' />

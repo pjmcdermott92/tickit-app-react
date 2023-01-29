@@ -1,70 +1,19 @@
 .sidebar-container {
 	position: relative;
 	width: 220px;
-	padding-top: 2.5rem;
+	padding: 1rem 0;
 	background-color: #fff;
 	box-shadow: 0 0 1px 2px rgba(0, 0, 0, 0.05);
 	line-break: none;
 	overflow: hidden;
 	transition: 250ms ease-in-out;
 
-	&.small {
-		width: 50px;
-
-		&:hover {
-			width: 220px;
-
-			.label {
-				display: initial;
-			}
-
-            .submenu li {
-                display: flex;
-            }
-
-            .sidebar-bottom-bg {
-                opacity: initial;
-            }
-		}
-
-		.label {
-			display: none;
-		}
-
-		.sidebar-bottom-bg {
-			opacity: 0;
-		}
-
-		.hide-nav-btn {
-			transform: rotate(180deg);
-		}
-
-		.submenu li {
-			display: none;
-		}
+	&.hidden {
+		width: 0;
 	}
 
 	.label {
 		white-space: nowrap;
-	}
-
-	.hide-nav-btn {
-		position: absolute;
-		top: 0.15rem;
-		right: 0.15rem;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 40px;
-		height: 40px;
-		font-size: 1.5rem;
-		cursor: pointer;
-		transition: 250ms ease-in-out;
-		border-radius: 100%;
-
-		&:hover {
-			background-color: var(--color-bg);
-		}
 	}
 
 	.sidebar-bottom-bg {

@@ -1,9 +1,12 @@
 .page-wrapper {
+    position: relative;
     display: flex;
     align-items: stretch;
     gap: .5rem;
+    width: 100%;
     height: calc(100vh - 3.25rem);
 }
 
 .main-container {
+    flex: 1;
 }

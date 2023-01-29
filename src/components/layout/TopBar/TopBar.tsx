@@ -1,16 +1,28 @@
 import { Link } from 'react-router-dom';
 import useToggle from '../../../hooks/useToggle';
-import { IoPersonOutline } from 'react-icons/io5';
+import { IoMenu, IoPersonOutline } from 'react-icons/io5';
 import Logo from '../../../assets/images/logo-semi-transparent.png';
 import UserMenu from '../../UserMenu/UserMenu';
 import './TopBar.scss';
 
-const TopBar = () => {
+type TopBarProps = {
+	showSidebar: boolean;
+	toggleShowSidebar: any;
+};
+
+const TopBar = ({ showSidebar, toggleShowSidebar }: TopBarProps) => {
 	const [showUserMenu, toggleShowUserMenu] = useToggle(false);
 
 	return (
 		<>
 			<header className='header-container'>
+				<button
+					className='menu-toggle-btn'
+					title={`${showSidebar ? 'Hide' : 'Show'} Menu`}
+					onClick={() => toggleShowSidebar()}
+				>
+					<IoMenu />
+				</button>
 				<div className='brand-logo'>
 					<Link to='/'>
 						<img src={Logo} alt={Logo} />

@@ -10,7 +10,7 @@ import {
 	IoTicketSharp,
 } from 'react-icons/io5';
 import './Sidebar.scss';
-import SidebarMenuItem from '../../SidebarMenuItem/SidebarMenuItem';
+import SidebarMenuItem from '../SidebarMenuItem/SidebarMenuItem';
 
 type SidebarMenuProps = {
 	showSidebar: boolean

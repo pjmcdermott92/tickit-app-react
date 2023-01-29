@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import useToggle from '../../hooks/useToggle';
+import useToggle from '../../../hooks/useToggle';
 import './SidebarMenuItem.scss';
 
 type SidebarMenuProps = {

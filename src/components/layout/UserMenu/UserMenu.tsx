@@ -1,5 +1,5 @@
 import { IoPersonCircleOutline, IoPower } from 'react-icons/io5';
-import ContextMenu from '../ui/ContextMenu/ContextMenu';
+import ContextMenu from '../../ui/ContextMenu/ContextMenu';
 import './UserMenu.scss';
 
 const MENU_ITEMS = [

@@ -1,8 +1,8 @@
 import { Outlet } from 'react-router-dom';
+import useToggle from '../../../hooks/useToggle';
 import TopBar from '../../../components/layout/TopBar/TopBar';
 import Sidebar from '../../../components/layout/Sidebar/Sidebar';
 import './RootLayout.scss';
-import useToggle from '../../../hooks/useToggle';
 
 const RootLayout = () => {
 	const [showSidebar, toggleShowSidebar] = useToggle(true);

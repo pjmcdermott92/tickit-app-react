@@ -1,9 +1,19 @@
+import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import useClickOutside from '../../../hooks/useClickOutside';
 import './ContextMenu.scss';
 
-const ContextMenu = ({ children, className, show }: any) => {
+const ContextMenu = ({ children, className, show, toggleShow }: any) => {
+	const contextMenuRef = useRef(null);
+	useClickOutside(contextMenuRef, toggleShow);
+	
 	if (!show) return null;
-	return <ul className={`context-menu-container ${className}`}>{children}</ul>;
+	
+	return (
+		<ul className={`context-menu-container ${className}`} ref={contextMenuRef}>
+			{children}
+		</ul>
+	);
 };
 
 ContextMenu.Item = ({ icon: Icon, label, href, onClick, className }: any) => {

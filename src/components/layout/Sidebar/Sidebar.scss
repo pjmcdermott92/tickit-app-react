@@ -9,6 +9,8 @@
 	line-break: none;
 	overflow: hidden;
 	transition: 250ms ease-in-out;
+	z-index: 200;
+	overflow-y: auto;
 
 	&.hidden {
 		width: 0;
@@ -32,6 +34,7 @@
 			position: bottom;
 		}
 		transition: 250ms ease-in-out;
+		z-index: -1;
 	}
 
 	.sidebar-menu {

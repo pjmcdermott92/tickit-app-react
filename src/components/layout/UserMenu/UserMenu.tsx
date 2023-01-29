@@ -7,9 +7,13 @@ const MENU_ITEMS = [
 	{ label: 'Log Out', icon: IoPower, onClick: () => {} },
 ];
 
-const UserMenu = ({ show }: any) => {
+const UserMenu = ({ show, toggleShow }: any) => {
 	return (
-		<ContextMenu className='user-context-menu' show={show}>
+		<ContextMenu
+			className='user-context-menu'
+			show={show}
+			toggleShow={toggleShow}
+		>
 			{MENU_ITEMS.map((item) => (
 				<ContextMenu.Item key={item.label} {...item} />
 			))}

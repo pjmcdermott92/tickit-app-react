@@ -10,6 +10,11 @@ const TopBar = () => {
 	const [showUserMenu, toggleShowUserMenu] = useToggle(false);
 	const { showSidebar, toggleShowSidebar } = useLayout();
 
+	const handleToggleUserMenu = (e: any) => {
+		e.stopPropagation();
+		toggleShowUserMenu();
+	};
+
 	return (
 		<>
 			<header className='header-container'>
@@ -30,7 +35,7 @@ const TopBar = () => {
 				</div>
 				<button
 					className={`user-info-btn ${showUserMenu ? 'active' : ''}`}
-					onClick={() => toggleShowUserMenu()}
+					onClick={handleToggleUserMenu}
 				>
 					<span className='icon'>
 						<IoPersonOutline />
@@ -41,7 +46,7 @@ const TopBar = () => {
 					</span>
 				</button>
 			</header>
-			<UserMenu show={showUserMenu} />
+			<UserMenu show={showUserMenu} toggleShow={toggleShowUserMenu} />
 		</>
 	);
 };

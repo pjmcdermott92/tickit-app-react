@@ -1,0 +1,75 @@
+.auth-wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-top: clamp(2rem, 6vmax, 8rem);
+	background-color: var(--color-primary);
+	text-align: center;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 40%;
+		bottom: 0;
+		width: 100%;
+		background-color: var(--color-bg);
+	}
+
+	.brand {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.brand-img {
+			height: clamp(40px, 10vmax, 60px);
+
+			img {
+				height: 100%;
+			}
+		}
+
+		h1 {
+			font: {
+				family: 'Kanit Bold', sans-serif;
+				size: clamp(1.4rem, 10vmax, 2.8rem);
+			}
+			color: #fff;
+			letter-spacing: 1.5px;
+
+			span {
+				color: rgba(255, 255, 255, 0.45);
+			}
+		}
+
+		h3 {
+			margin: 0.25rem 0 0.75rem;
+			font: {
+				size: clamp(1.25rem, 3vmax, 1.65rem);
+				weight: 500;
+			}
+			color: rgba(255, 255, 255, 0.65);
+		}
+	}
+}
+
+.auth-container {
+	position: relative;
+	margin-top: 1rem;
+	width: 100%;
+	max-width: 450px;
+	padding: 0.5rem;
+	z-index: 100;
+
+	.card {
+		width: 100%;
+		height: 285px;
+		background-color: #fff;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.15);
+		border: 1px solid #ccc;
+	}
+}

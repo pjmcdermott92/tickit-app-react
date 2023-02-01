@@ -19,6 +19,7 @@ $color-dark-accent-dark: #18191a;
 
 :root {
 	--color-primary: #{$color-primary};
+	--color-primary-light: #{lighten(#1a6ec2, 20%)};
 	--color-success: #{$color-success};
 	--color-danger: #{$color-danger};
 	--color-warning: #{$color-warning};

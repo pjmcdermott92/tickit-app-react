@@ -1,0 +1,33 @@
+.sr-only {
+    visibility: hidden;
+    position: absolute;
+    top: -1000%;
+    left: -1000%;
+}
+
+// Background Colors
+.bg {
+    &-primary { @include set-background($color-primary); }
+    &-success { @include set-background($color-success); }
+    &-danger { @include set-background($color-danger); }
+    &-warning { @include set-background($color-warning); }
+    &-dark { @include set-background($color-dark); }
+    &-light { @include set-background($color-light); }
+    &-white { @include set-background(#FFF); }
+}
+
+// Text Styles
+.text {
+    &-primary { color: $color-primary; }
+    &-success { color: $color-success; }
+    &-danger { color: $color-danger; }
+    &-warning { color: $color-warning; }
+    &-dark { color: var(--color-base); }
+    &-muted { opacity: .65; }
+
+    &-xl { font-size: clamp(1.8rem, 12vmin, 2.6rem); }
+    &-lg { font-size: clamp(1.4rem, 12vmin, 2.1rem); }
+    &-md { font-size: clamp(1rem, 12vmin, 1.25rem); }
+
+    &-center { text-align: center; }
+}

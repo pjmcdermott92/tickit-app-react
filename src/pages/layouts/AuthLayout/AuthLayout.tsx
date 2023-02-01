@@ -16,9 +16,7 @@ const AuthLayout = () => {
 					<h3>Project Tracker for Developers</h3>
 				</div>
 				<div className='auth-container'>
-					<div className='card'>
 					<Outlet />
-					</div>
 				</div>
 			</div>
 		</>
